@@ -31,7 +31,7 @@ const Item = ({
     <Box p='s' w>
       <Box
         w
-        h={{ xs: '24px', sm: '24px', md: '48px', lg: '72px' }}
+        minH={{ xs: '24px', sm: '24px', md: '48px', lg: '72px' }}
       >
         <Text mb='xxs'>
           {title}
