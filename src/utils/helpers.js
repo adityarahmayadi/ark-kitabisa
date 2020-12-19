@@ -8,3 +8,8 @@ export const formatIDR = value => {
     2
   )}`
 }
+
+export const sortBy = (data, by) => {
+  const list = [...data]
+  return list.sort((a, b) => (a[by] > b[by] ? 1 : -1))
+}
