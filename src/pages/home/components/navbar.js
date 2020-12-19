@@ -5,14 +5,14 @@ const Navbar = () => (
   <Box 
     w
     p='s'
-    fDir='row'
+    fDir={{ xs: 'column', lg: 'row' }}
     as='header'
     fJustify='space-between'
     fAlign='center'
     posi='fixed'
     bg='white10'
   >
-    <Box fDir='row' fAlign='center'>
+    <Box fDir='row' fAlign='center' m={{xs: 's', lg: '0'}} w>
       <Image
         src={require('@kitabisa/assets/images/logo.png')}
         objectFit='contain'
@@ -29,13 +29,15 @@ const Navbar = () => (
       </Text>
     </Box>
 
-    <Box fDir='row'>
+    <Box fDir={{ xs: 'column', lg: 'row' }} w fJustify='flex-end'>
       <Box  
-        mr='s'
+        mr={{xs: '0', lg: 's'}}
+        mb={{xs: 's', lg: '0'}}
         p='s'
         bg='blue50'
         radius='24px'
         cursor='pointer'
+        fAlign='center'
       >
         <Text c='white10'>Sorting by Donation Goal</Text>
       </Box>
@@ -44,6 +46,7 @@ const Navbar = () => (
         p='s'
         cursor='pointer'
         bg='blue50'
+        fAlign='center'
       >
         <Text c='white10'>Sorting by Remaining Days</Text>
       </Box>
